@@ -10,7 +10,7 @@ export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
   var footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
 
-  const urlCheck = new URL(navMeta, window.location).pathname
+  const urlCheck = new URL(footerMeta, window.location).pathname
      if(urlCheck === '/contactus/'){
         footerPath = urlCheck + 'nav';
      }
