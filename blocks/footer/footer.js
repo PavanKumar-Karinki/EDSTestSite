@@ -8,7 +8,13 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   // load footer as fragment
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  var footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+
+  const urlCheck = new URL(navMeta, window.location).pathname
+     if(urlCheck === '/contactus/'){
+        footerPath = urlCheck + 'nav';
+     }
+  
   const fragment = await loadFragment(footerPath);
 
   // decorate footer DOM
