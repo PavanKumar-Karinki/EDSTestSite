@@ -115,7 +115,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  let navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   let ifcheck = new URL(navMeta, window.location).pathname
      if(ifcheck==='/contactus/')
         navPath=ifcheck+'nav'
