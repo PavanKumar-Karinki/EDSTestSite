@@ -12,7 +12,7 @@ export default async function decorate(block) {
 
   const urlCheck = new URL(footerMeta, window.location).pathname
      if(urlCheck === '/contactus/'){
-        footerPath = urlCheck + 'nav';
+        footerPath = urlCheck + 'footer';
      }
   
   const fragment = await loadFragment(footerPath);
