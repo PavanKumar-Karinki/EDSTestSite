@@ -118,7 +118,7 @@ export default async function decorate(block) {
   let navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   let ifcheck = new URL(navMeta, window.location).pathname
      if(ifcheck === '/contactus/'){
-        navPath=ifcheck+'nav'
+        navPath = ifcheck + 'nav';
      }
   
   const fragment = await loadFragment(navPath);
